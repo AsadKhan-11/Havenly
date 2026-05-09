@@ -2,7 +2,8 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import { Plus, Minus } from "lucide-react";
+import { Plus, Minus, ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 const faqs = [
   {
@@ -100,6 +101,16 @@ export function FAQ() {
               </AnimatePresence>
             </motion.div>
           ))}
+        </div>
+
+        <div className="text-center mt-12">
+          <Link
+            href="/faq"
+            className="group inline-flex items-center gap-3 text-pearl/50 uppercase tracking-[0.2em] text-[11px] font-medium transition-colors hover:text-gold"
+          >
+            <span>View All FAQs</span>
+            <ArrowRight size={13} className="group-hover:translate-x-1 transition-transform" />
+          </Link>
         </div>
       </div>
     </section>

@@ -42,7 +42,7 @@ export function PreFooterCTA() {
           transition={{ delay: 0.3 }}
         >
           <Link
-            href="/#contact"
+            href="/contact"
             className="group relative inline-flex items-center gap-3 px-10 py-4 rounded-full border border-gold/60 text-pearl uppercase tracking-[0.2em] text-[11px] font-medium overflow-hidden transition-all duration-500 hover:border-gold hover:shadow-[0_0_30px_rgba(212,175,55,0.15)]"
           >
             <span className="absolute inset-0 bg-gradient-to-r from-gold/0 via-gold/10 to-gold/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />

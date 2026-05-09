@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 const neighborhoods = [
   { name: "Beverly Hills", count: "12 Properties", image: "/exterior.png", colSpan: "md:col-span-2" },
@@ -34,17 +35,15 @@ export function Neighborhoods() {
               Global Presence
             </motion.h2>
           </div>
-          <motion.button 
-             initial={{ opacity: 0 }}
-             whileInView={{ opacity: 1 }}
-             viewport={{ once: true }}
+          <Link 
+             href="/properties"
              className="group inline-flex items-center gap-3 text-pearl uppercase tracking-[0.2em] font-medium text-[11px] transition-colors hover:text-gold"
           >
              <span>View All Markets</span>
              <span className="flex items-center justify-center w-7 h-7 rounded-full border border-white/20 group-hover:border-gold group-hover:bg-gold group-hover:text-obsidian transition-all duration-300">
                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M1 5h8M5.5 1.5 9 5l-3.5 3.5"/></svg>
              </span>
-          </motion.button>
+          </Link>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 h-[800px]">

@@ -3,6 +3,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 const properties = [
@@ -66,9 +67,9 @@ export function FeaturedProperties() {
                 </div>
                 <div className="text-right">
                   <p className="text-xl font-serif text-white mb-4">{prop.price}</p>
-                  <button className="flex items-center justify-center w-12 h-12 rounded-full border border-white/20 backdrop-blur-sm hover:bg-gold hover:border-gold hover:text-obsidian transition-all duration-300 hover:shadow-[0_0_20px_rgba(212,175,55,0.2)]">
+                  <Link href="/properties" className="flex items-center justify-center w-12 h-12 rounded-full border border-white/20 backdrop-blur-sm text-pearl hover:bg-gold hover:border-gold hover:text-obsidian transition-all duration-300 hover:shadow-[0_0_20px_rgba(212,175,55,0.2)]">
                     <ArrowRight size={18} />
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>

@@ -1,6 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 const steps = [
   { num: "01", title: "Global Discovery", desc: "We utilize our extensive international network to source off-market properties tailored to your specific criteria." },
@@ -41,6 +43,21 @@ export function Process() {
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mt-20"
+        >
+          <Link
+            href="/process"
+            className="group inline-flex items-center gap-3 px-8 py-3.5 rounded-full border border-obsidian/20 text-obsidian uppercase tracking-[0.2em] text-[11px] font-medium transition-all duration-500 hover:bg-obsidian hover:text-pearl hover:border-obsidian"
+          >
+            <span>Explore Full Process</span>
+            <ArrowRight size={13} className="group-hover:translate-x-1 transition-transform" />
+          </Link>
+        </motion.div>
       </div>
     </section>
   );

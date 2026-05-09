@@ -71,8 +71,8 @@ export function Footer() {
       <div className="relative z-10 max-w-7xl mx-auto mt-24 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-white/30 text-xs font-sans">
         <p>&copy; {new Date().getFullYear()} Havenly Real Estate. All rights reserved.</p>
         <div className="flex gap-6">
-          <a href="#" className="hover:text-white/60 transition-colors">Privacy Policy</a>
-          <a href="#" className="hover:text-white/60 transition-colors">Terms of Service</a>
+          <Link href="/privacy" className="hover:text-white/60 transition-colors">Privacy Policy</Link>
+          <Link href="/terms" className="hover:text-white/60 transition-colors">Terms of Service</Link>
         </div>
       </div>
     </footer>

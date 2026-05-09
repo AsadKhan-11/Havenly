@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 export function AboutUs() {
@@ -41,12 +42,12 @@ export function AboutUs() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-             <button className="group inline-flex items-center gap-3 text-obsidian uppercase tracking-[0.2em] text-[11px] font-medium transition-colors duration-300 hover:text-gold">
+             <Link href="/about" className="group inline-flex items-center gap-3 text-obsidian uppercase tracking-[0.2em] text-[11px] font-medium transition-colors duration-300 hover:text-gold">
                <span>Discover Our Story</span>
                <span className="flex items-center justify-center w-8 h-8 rounded-full border border-obsidian/20 group-hover:border-gold group-hover:bg-gold group-hover:text-obsidian transition-all duration-300">
                  <ArrowRight size={12} />
                </span>
-             </button>
+             </Link>
           </motion.div>
         </div>
 
