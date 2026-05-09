@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 
 export function AboutUs() {
   return (
@@ -40,8 +41,11 @@ export function AboutUs() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-             <button className="border-b border-obsidian text-obsidian pb-1 uppercase tracking-[0.2em] text-xs font-bold hover:text-gold hover:border-gold transition-colors duration-300">
-               Discover Our Story
+             <button className="group inline-flex items-center gap-3 text-obsidian uppercase tracking-[0.2em] text-[11px] font-medium transition-colors duration-300 hover:text-gold">
+               <span>Discover Our Story</span>
+               <span className="flex items-center justify-center w-8 h-8 rounded-full border border-obsidian/20 group-hover:border-gold group-hover:bg-gold group-hover:text-obsidian transition-all duration-300">
+                 <ArrowRight size={12} />
+               </span>
              </button>
           </motion.div>
         </div>
@@ -55,7 +59,7 @@ export function AboutUs() {
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
             className="absolute top-0 right-0 w-4/5 h-[80%] z-10"
           >
-             <div className="relative w-full h-full">
+             <div className="relative w-full h-full rounded-2xl overflow-hidden">
                <Image src="/interior.png" alt="Luxury Interior" fill sizes="(max-width: 768px) 100vw, 50vw" priority className="object-cover" />
              </div>
           </motion.div>
@@ -65,9 +69,9 @@ export function AboutUs() {
             whileInView={{ opacity: 1, scale: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="absolute bottom-0 left-0 w-[60%] h-[50%] z-20 border-8 border-pearl"
+            className="absolute bottom-0 left-0 w-[60%] h-[50%] z-20 p-2 bg-pearl rounded-2xl"
           >
-             <div className="relative w-full h-full bg-obsidian">
+             <div className="relative w-full h-full bg-obsidian rounded-xl overflow-hidden">
                 <Image src="/exterior.png" alt="Luxury Architecture" fill sizes="(max-width: 768px) 100vw, 50vw" priority className="object-cover opacity-90" />
              </div>
           </motion.div>

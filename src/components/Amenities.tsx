@@ -60,7 +60,7 @@ export function Amenities() {
         >
           {amenities.map((item, idx) => (
             <motion.div key={idx} variants={itemVariants} className="group cursor-default">
-              <div className="w-12 h-12 rounded-full border border-obsidian/20 flex items-center justify-center mb-6 group-hover:bg-gold group-hover:border-gold group-hover:text-obsidian transition-all duration-300">
+              <div className="w-12 h-12 rounded-xl border border-obsidian/15 flex items-center justify-center mb-6 group-hover:bg-gold group-hover:border-gold group-hover:text-obsidian group-hover:shadow-[0_4px_20px_rgba(212,175,55,0.2)] transition-all duration-300">
                 <item.icon size={22} className="text-obsidian group-hover:text-obsidian transition-colors" strokeWidth={1.5} />
               </div>
               <h3 className="text-xl font-serif text-obsidian mb-3">{item.title}</h3>

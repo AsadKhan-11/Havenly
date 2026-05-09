@@ -46,8 +46,8 @@ export function FeaturedProperties() {
 
         <motion.div style={{ x }} className="flex gap-8 px-6 md:px-12 lg:px-24 w-max">
           {properties.map((prop) => (
-            <div key={prop.id} className="group relative w-[80vw] md:w-[60vw] lg:w-[40vw] h-[60vh] overflow-hidden bg-white/5 backdrop-blur-sm">
-              <div className="absolute inset-0 z-0 overflow-hidden">
+            <div key={prop.id} className="group relative w-[80vw] md:w-[60vw] lg:w-[40vw] h-[60vh] overflow-hidden rounded-2xl bg-white/5 backdrop-blur-sm">
+              <div className="absolute inset-0 z-0 overflow-hidden rounded-2xl">
                 <Image 
                   src={prop.image} 
                   alt={prop.title} 
@@ -66,8 +66,8 @@ export function FeaturedProperties() {
                 </div>
                 <div className="text-right">
                   <p className="text-xl font-serif text-white mb-4">{prop.price}</p>
-                  <button className="flex items-center justify-center w-12 h-12 rounded-full border border-white/30 hover:bg-gold hover:border-gold hover:text-obsidian transition-all duration-300">
-                    <ArrowRight size={20} />
+                  <button className="flex items-center justify-center w-12 h-12 rounded-full border border-white/20 backdrop-blur-sm hover:bg-gold hover:border-gold hover:text-obsidian transition-all duration-300 hover:shadow-[0_0_20px_rgba(212,175,55,0.2)]">
+                    <ArrowRight size={18} />
                   </button>
                 </div>
               </div>

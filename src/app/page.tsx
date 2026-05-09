@@ -11,6 +11,7 @@ import { Neighborhoods } from "@/components/Neighborhoods";
 import { Testimonials } from "@/components/Testimonials";
 import { FAQ } from "@/components/FAQ";
 import { Contact } from "@/components/Contact";
+import { PreFooterCTA } from "@/components/PreFooterCTA";
 import { Footer } from "@/components/Footer";
 
 export default function Home() {
@@ -29,6 +30,7 @@ export default function Home() {
       <Testimonials />
       <FAQ />
       <Contact />
+      <PreFooterCTA />
       <Footer />
     </main>
   );

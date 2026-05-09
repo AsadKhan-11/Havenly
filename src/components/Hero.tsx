@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { ArrowRight } from "lucide-react";
 
 export function Hero() {
   const ref = useRef(null);
@@ -47,9 +48,11 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="mt-12 px-10 py-5 bg-gold text-obsidian uppercase tracking-[0.2em] text-xs font-bold hover:bg-pearl transition-colors duration-500"
+          className="group mt-14 relative inline-flex items-center gap-3 px-10 py-4 rounded-full border border-gold/60 text-pearl uppercase tracking-[0.2em] text-[11px] font-medium overflow-hidden transition-all duration-500 hover:border-gold hover:shadow-[0_0_30px_rgba(212,175,55,0.15)]"
         >
-          Explore Collection
+          <span className="absolute inset-0 bg-gradient-to-r from-gold/0 via-gold/10 to-gold/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
+          <span className="relative z-10">Explore Collection</span>
+          <ArrowRight size={14} className="relative z-10 transition-transform duration-300 group-hover:translate-x-1" />
         </motion.button>
       </motion.div>
     </section>

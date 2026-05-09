@@ -38,13 +38,16 @@ export function Neighborhoods() {
              initial={{ opacity: 0 }}
              whileInView={{ opacity: 1 }}
              viewport={{ once: true }}
-             className="text-white border-b border-white pb-1 tracking-[0.2em] font-bold text-xs uppercase hover:text-gold hover:border-gold transition-colors"
+             className="group inline-flex items-center gap-3 text-pearl uppercase tracking-[0.2em] font-medium text-[11px] transition-colors hover:text-gold"
           >
-             View All Markets
+             <span>View All Markets</span>
+             <span className="flex items-center justify-center w-7 h-7 rounded-full border border-white/20 group-hover:border-gold group-hover:bg-gold group-hover:text-obsidian transition-all duration-300">
+               <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M1 5h8M5.5 1.5 9 5l-3.5 3.5"/></svg>
+             </span>
           </motion.button>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 h-[800px]">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 h-[800px]">
           {neighborhoods.map((area, idx) => (
             <motion.div 
               key={idx}
@@ -52,7 +55,7 @@ export function Neighborhoods() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1, duration: 0.6 }}
-              className={`relative overflow-hidden group cursor-pointer ${area.colSpan}`}
+              className={`relative overflow-hidden group cursor-pointer rounded-2xl ${area.colSpan}`}
             >
               <Image 
                 src={area.image} 
